@@ -127,8 +127,16 @@ export interface AttributeValueInput {
 }
 
 export interface AuthorizationKeyInput {
-  key?: string | null;
-  password?: string | null;
+  key: string;
+  password: string;
+}
+
+export interface CategoryInput {
+  description?: string | null;
+  name?: string | null;
+  parent?: string | null;
+  slug?: string | null;
+  seo?: SeoInput | null;
 }
 
 export interface DraftOrderInput {
@@ -192,6 +200,11 @@ export interface ProductTypeInput {
   isShippingRequired?: boolean | null;
   weight?: any | null;
   taxRate?: TaxRateType | null;
+}
+
+export interface SeoInput {
+  title?: string | null;
+  description?: string | null;
 }
 
 export interface ShopSettingsInput {
