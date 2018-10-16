@@ -12,8 +12,8 @@ const CategoryPaginator: React.StatelessComponent<RouteComponentProps<any>> = ({
 }) => {
   const qs = parseQs(location.search.substr(1));
   const params = {
-    after: decodeURIComponent(qs.after),
-    before: decodeURIComponent(qs.before)
+    after: qs.after,
+    before: qs.before
   };
   return (
     <CategoryDetails
